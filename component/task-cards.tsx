@@ -1,13 +1,23 @@
 import * as React from 'react';
 import { SegmentMenu } from './segment-menu';
 import {default as TaskItems } from './data/mock-data';
-export class TaskCards extends React.Component {
-    constructor(props: []) {
+
+interface AppProps{ }
+interface AppState{ contentHeight: string; }
+
+export class TaskCards extends React.Component<AppProps, AppState> {
+    constructor(props: AppProps) {
         super(props);
+        this.state = { contentHeight : '180px'};
     }
+
+    slideTaskDetails = (event) => {
+      this.setState({contentHeight: this.state.contentHeight === "400px" ? "180px" : "400px"});
+    }
+
     render() {
         return (
-            <div className="task-card">
+            <div className="task-card" style={{ height: this.state.contentHeight}}>
                 <SegmentMenu />
                 <div className="processname">
                     Finance Manage Approval
@@ -61,6 +71,7 @@ export class TaskCards extends React.Component {
                         <div className="item-data">12/03/2019</div>
                     </div>
                 </div>
+                  <div className="slidButton" onClick={this.slideTaskDetails}>^</div>
             </div>
         );
     }
