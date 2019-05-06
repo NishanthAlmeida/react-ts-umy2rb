@@ -27,7 +27,7 @@
 }
 
 .processname {
-  font-size: 14px;
+  font-size: 16px;
   color: #1EA0E9;
 }
 
@@ -56,6 +56,12 @@
 
 .item-details img{
   margin: 0px 5px 0px 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.item-details span:nth-child(2) {
+vertical-align: super;
 }
 
 .metadata-details {
@@ -69,6 +75,10 @@
     margin: 10px 0px;
 }
 
+.right-align.right-align{
+  text-align: right;
+}
+
 .metadata-items .item-header {
       font-weight: bold;
     font-size: 13px;
@@ -80,6 +90,7 @@
 
 .menu-widget .menus{
   margin:3px;
+  cursor: pointer;
 }
 
 .menu-widget .menus img {
