@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 .task-card {
   width: 300px;
-  height: 300px;
+  height: auto;
   border: 1px solid #000;
   display: flex;
   flex-direction: column;
   padding:5px;
   font-family: 'Poppins', sans-serif;
+  font-size: 14px;
 }
 
 .task-card > div{
@@ -21,30 +22,35 @@
 }
 
 .processname {
-  font-size: 16px;
+  font-size: 14px;
   color: #1EA0E9;
 }
 
 .appname {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .priority {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .priority span {
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .time-details{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;  
+  margin: 5px 0px;
 }
 
 .item-details{
   width:50%;
+}
+
+.item-details img{
+  margin: 0px 5px 0px 0px;
 }
 
 .metadata-details {
@@ -54,5 +60,19 @@
 }
 
 .metadata-items {
-  width: 50%;
+    width: 50%;
+    margin: 10px 0px;
+}
+
+.metadata-items .item-header {
+      font-weight: bold;
+    font-size: 13px;
+}
+
+.metadata-items .item-data {
+  font-size: 12px;
+}
+
+.menu-widget .menus{
+  margin:3px;
 }
