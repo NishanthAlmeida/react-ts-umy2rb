@@ -8,11 +8,11 @@ interface AppState{ contentHeight: string; }
 export class TaskCards extends React.Component<AppProps, AppState> {
     constructor(props: AppProps) {
         super(props);
-        this.state = { contentHeight : '180px'};
+        this.state = { contentHeight : '200px'};
     }
 
     slideTaskDetails = (event) => {
-      this.setState({contentHeight: this.state.contentHeight === "400px" ? "180px" : "400px"});
+      this.setState({contentHeight: this.state.contentHeight === "400px" ? "200px" : "400px"});
     }
 
     render() {
