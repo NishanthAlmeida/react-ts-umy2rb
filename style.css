@@ -11,7 +11,7 @@
   font-size: 12px;
   position: relative;
   transition-property: height;
-  transition-duration: 1s;
+  transition-duration: .6s;
   transition-timing-function: ease;
 }
 
@@ -27,12 +27,12 @@
 }
 
 .processname {
-  font-size: 16px;
+  font-size: 18px;
   color: #1EA0E9;
 }
 
 .appname {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .priority {
