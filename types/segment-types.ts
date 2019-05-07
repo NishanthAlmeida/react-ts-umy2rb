@@ -3,5 +3,5 @@ export interface ISegmentMenuItems{
   name: string;
   icon: string;
   onClick: () => void;
-  hangingMenuItems?: ISegmentMenuItems[]
 }
+

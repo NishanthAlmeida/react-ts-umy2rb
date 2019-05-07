@@ -42,24 +42,26 @@ export class TaskCards extends React.Component<AppProps, AppState> {
           icon: 'changeflow-icon',
           onclick: (e) => {
             alert('change flow');
-          },
-          hangingMenuItems: [
-          {
-            name: 'Change Flow',
-            icon: 'changeflow-icon',
-            onclick: (e) => {
-              alert('change flow');
-            }
           }
-        ]
         }
       ];
+    }
+
+    prepareFarItems(){
+      return [{
+          key:'change-flow1',
+          name: 'Change Flow',
+          icon: 'changeflow-icon',
+          onclick: (e) => {
+            alert('change flow');
+          }
+        }];
     }
 
     render() {
         return (
             <div className="task-card" style={{ height: this.state.containerExpanded ? '200px' : '400px'}}>
-                <SegmentMenu menuItems={this.prepareSegmentMenuItems()} />
+                <SegmentMenu menuItems={this.prepareSegmentMenuItems()} farItems={this.prepareFarItems()} />
                 <div className="processname">
                     Finance Manage Approval
                 </div>

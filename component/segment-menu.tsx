@@ -3,6 +3,7 @@ import { ISegmentMenuItems } from './types/segment-types';
 
 export interface segmentMenuProps{
   menuItems: ISegmentMenuItems[];
+  farItems: ISegmentMenuItems[];
 }
 
 export class SegmentMenu extends React.Component<segmentMenuProps> {
