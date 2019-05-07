@@ -3,21 +3,22 @@ import { SegmentMenu } from './segment-menu';
 import {default as TaskItems } from './data/mock-data';
 
 interface AppProps{ }
-interface AppState{ contentHeight: string; }
-
+interface AppState{ containerExpanded: boolean; }
+ 
 export class TaskCards extends React.Component<AppProps, AppState> {
     constructor(props: AppProps) {
         super(props);
-        this.state = { contentHeight : '200px'};
+        this.state = { containerExpanded : true};
     }
 
     slideTaskDetails = (event) => {
-      this.setState({contentHeight: this.state.contentHeight === "400px" ? "200px" : "400px"});
+      debugger;
+      this.setState({containerExpanded: (this.state.containerExpanded) ? false : true});
     }
 
     render() {
         return (
-            <div className="task-card" style={{ height: this.state.contentHeight}}>
+            <div className="task-card" style={{ height: this.state.containerExpanded ? '200px' : '400px'}}>
                 <SegmentMenu />
                 <div className="processname">
                     Finance Manage Approval
@@ -71,7 +72,7 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                         <div className="item-data">12/03/2019</div>
                     </div>
                 </div>
-                  <div className="slidButton" onClick={this.slideTaskDetails}>^</div>
+                  <div className={`slideButton ${this.state.containerExpanded ? 'slidein' : 'slideout'}`} onClick={this.slideTaskDetails}></div>
             </div>
         );
     }
