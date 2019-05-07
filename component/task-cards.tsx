@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SegmentMenu } from './segment-menu';
 import {default as TaskItems } from './data/mock-data';
+import { ISegmentMenuItems } from './types/segment-types';
 
 interface AppProps{ }
 interface AppState{ containerExpanded: boolean; }
@@ -12,14 +13,27 @@ export class TaskCards extends React.Component<AppProps, AppState> {
     }
 
     slideTaskDetails = (event) => {
-      debugger;
       this.setState({containerExpanded: (this.state.containerExpanded) ? false : true});
+    }
+
+    prepareSegmentMenuItems(){
+      const menu: ISegmentMenuItems[] = [
+        {
+          key: 'process-viewer',
+          name: 'process-viewer',
+          icon: 'processvier-icon',
+          onClick: (e) => {
+            alert('click');
+          }
+        }
+      ]
+      return (menu);
     }
 
     render() {
         return (
             <div className="task-card" style={{ height: this.state.containerExpanded ? '200px' : '400px'}}>
-                <SegmentMenu />
+                <SegmentMenu menuItems={this.prepareSegmentMenuItems} />
                 <div className="processname">
                     Finance Manage Approval
                 </div>

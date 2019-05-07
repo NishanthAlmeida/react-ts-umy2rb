@@ -1,10 +1,16 @@
 import * as React from 'react';
+import { ISegmentMenuItems } from './types/segment-types';
 
-export class SegmentMenu extends React.Component {
-  constructor(props: []) {
+export interface segmentMenuProps{
+  menuItems: ISegmentMenuItems[];
+}
+
+export class SegmentMenu extends React.Component<segmentMenuProps> {
+  constructor(props: segmentMenuProps) {
     super(props);
   }
   render() {
+    console.log(this.props);
     return (
       <div className="menu-widget">
         <span className="menus"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQPSURBVFhH7Zb1S217EMXfn2YHdmEXBggWBiL4kwpiodiKGCioKIqNGCi2mCgiJnaL3boua945PuMU3Heu74ELNpvdn5nvzJr9F/5H+oHVl35g9aUfWH1JZ9jn52ccHBxgbGxM9t8hnWAJur29jZKSEoSHh6OiouJbgLXCKkELCwvh6uoKMzMzeHl5fQuwRtjPoEZGRjAwMICxsfG3AKuFJejW1tYXUOVGYE9PT5SXl/8xYLWwr6+vOD09RUNDg0C9B1XCBgQEoKOjA5eXl4qn9CutZbC3t4fq6mq4ubl9APX390djYyOOj4/x8vKieOIfPT4+YmdnB/39/aipqUFxcTHy8vJQVFQkCZiYmMDJyYnKZ9VJpwZ7D6wN9Pb2FpOTk8jPzxfn8PX1RVhYGDIyMlBaWoq0tDSEhITAz88PUVFRqKysxNLSEu7v7xVvUC+tsJSy0Zgdfqiuru4LKDO5vr4uTcd7bGxsYGVlhbi4OAwMDEiWj46OsLm5ic7OToSGhsLc3Bz29vYSFINnpjVJJ1iKGRscHERKSopk7j0or42MjCAhIQEODg6SfW6BgYHo6enB4uIiqqqqkJWVhfn5eemFlpYW+Pj4SFmZmJjAw8NDrq+srKgtDZ1huUyss8zMTMzNzSnO/g06PDyMmJgYWFhYvNW1tbU10tPTMTMzI6De3t4SCMuAQTNgPqN0GUNDQ7mempqqFvi3YQ8PD5GTkwNbW9s3UG5c3oKCAoFKTk6WQJhtd3d3qd2pqSkkJSV9CJDAzHZ3d7ck4bN+G/bu7k7+F5gl1qDyw8rMTk9Po6ysDM7OzgLDDLe3t8s7YmNjP/g3A87OzpbaZ598llZY+i2bqbm5GdHR0TIg4uPjpUlYe7x+c3PzlkFlhpnFoKAg9PX1YW1tTfyYA4Q1zGM2FKcg72UQLi4ushKrq6vSrKqkFZagzAyXx9TUVF7MDNK+WIssAwIz8xsbG6ivr0dwcLDcyyVmgL29vXIfg6MrMHA6Bv8z+K6IiAgJnpPw6elJ8eWv0gh7fX2Nrq4uyZCqccvzNH2WAsWmuLi4wMLCAmpra2UFmDFOQNoTj7nnMbfExES0tbVheXlZvsWgNUkjLLORm5sLOzu7D6DKzdHRUXyV/vlerDdC89+CVjU0NITW1lY0NTXJfnR0VOxsd3dXSkidVX2WRtj9/X2xGpq7Klh2PH90eJ86MVtcWkJdXV3JXlXz6CKNsJwotBknJyeVsOxwzv2zszPFE/qVRlg2zfj4uIxG1uh7UDYGrWd2dlZjU/yb0gjLJTw/P5cmi4yMfDNwS0tLmfmcXFzWPyWNsBSLn7XGEUjPpO3QAeiVqqaMPqUVVimllzKTDw8PWm1GH9IZ9r+gH1h96QdWPwJ+AeInl40IgOBDAAAAAElFTkSuQmCC" /></span>
