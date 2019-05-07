@@ -17,23 +17,29 @@ export class TaskCards extends React.Component<AppProps, AppState> {
     }
 
     prepareSegmentMenuItems(){
-      const menu: ISegmentMenuItems[] = [
-        {
-          key: 'process-viewer',
-          name: 'process-viewer',
-          icon: 'processvier-icon',
-          onClick: (e) => {
-            alert('click');
-          }
-        }
-      ];
       return [
         {
           key: 'process-viewer',
           name: 'process-viewer',
-          icon: 'processvier-icon',
+          icon: 'process-icon',
           onClick: (e) => {
             alert('click');
+          }
+        },
+        {
+          key: 'open-form',
+          name: 'open-form',
+          icon: 'openform-icon',
+          onClick: (e) => {
+            alert('click');
+          }
+        },
+        {
+          key:'change-flow',
+          name: 'Change Flow',
+          icon: 'changeflow-icon',
+          onclick: (e) => {
+            alert('change flow');
           }
         }
       ];

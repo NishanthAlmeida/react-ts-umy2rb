@@ -1,6 +1,6 @@
 export interface ISegmentMenuItems{
   key: string;
   name: string;
-  icons: string;
+  icon: string;
   onClick: () => void;
 }
