@@ -26,14 +26,23 @@ export class TaskCards extends React.Component<AppProps, AppState> {
             alert('click');
           }
         }
-      ]
-      return (menu);
+      ];
+      return [
+        {
+          key: 'process-viewer',
+          name: 'process-viewer',
+          icon: 'processvier-icon',
+          onClick: (e) => {
+            alert('click');
+          }
+        }
+      ];
     }
 
     render() {
         return (
             <div className="task-card" style={{ height: this.state.containerExpanded ? '200px' : '400px'}}>
-                <SegmentMenu menuItems={this.prepareSegmentMenuItems} />
+                <SegmentMenu menuItems={this.prepareSegmentMenuItems()} />
                 <div className="processname">
                     Finance Manage Approval
                 </div>
