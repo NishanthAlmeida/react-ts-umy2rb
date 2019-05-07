@@ -3,7 +3,9 @@ import { SegmentMenu } from './segment-menu';
 import {default as TaskItems } from './data/mock-data';
 import { ISegmentMenuItems } from './types/segment-types';
 
-interface AppProps{ }
+interface AppProps{
+  menuItems: any;
+ }
 interface AppState{ containerExpanded: boolean; }
  
 export class TaskCards extends React.Component<AppProps, AppState> {
@@ -40,7 +42,16 @@ export class TaskCards extends React.Component<AppProps, AppState> {
           icon: 'changeflow-icon',
           onclick: (e) => {
             alert('change flow');
+          },
+          hangingMenuItems: [
+          {
+            name: 'Change Flow',
+            icon: 'changeflow-icon',
+            onclick: (e) => {
+              alert('change flow');
+            }
           }
+        ]
         }
       ];
     }
@@ -70,7 +81,6 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                         <span>3 Days ago</span>
                     </div>
                 </div>
-
                 <div className="metadata-details">
                     <div className="metadata-items">
                         <div className="item-header">Region:</div>

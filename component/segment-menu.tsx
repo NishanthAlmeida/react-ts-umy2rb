@@ -15,7 +15,7 @@ export class SegmentMenu extends React.Component<segmentMenuProps> {
       <div className="menu-widget">
       {this.props.menuItems.map((r) => {
         return (
-          <span className="menus" title={r.name}>
+          <span className="menus" title={r.name} onClick={r.onClick}>
             <div className={`menu-item ${r.icon}`}></div>
           </span>
         )
