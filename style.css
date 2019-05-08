@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 .taskdetails-container{
-  width:900px;
-  height:700px;
+  width:100%;
+  height:auto;
   overflow: auto;
   border:1px solid #000;
   padding: 10px;
+      display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .task-card {
@@ -147,6 +150,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
   width: 100vw;
   height: 100vh;
   visibility: visible;
+  z-index: 1;
 }
 
 .faritems-container{
