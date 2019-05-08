@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ISegmentMenuItems } from './types/segment-types';
+import { ISegmentMenuItems } from '../types/segment-types';
 
 export interface segmentMenuProps {
   menuItems: ISegmentMenuItems[];

@@ -6,10 +6,10 @@ interface IMetaDataDetails {
 }
 
 interface IMetaDataDetailsProps {
-  metaDataItems: IMetaDataDetails[]
+  metaDataItems: any;
 }
 
-export class MetaDataDetails extends React.Component<IMetaDataDetailsProps>{
+export class MetaDataDetails extends React.Component<IMetaDataDetailsProps, any>{
 
   constructor(props: IMetaDataDetailsProps) {
     super(props);
@@ -19,12 +19,17 @@ export class MetaDataDetails extends React.Component<IMetaDataDetailsProps>{
     console.log(this.props.metaDataItems)
     return (
       <React.Fragment>
-        {this.props.metaDataItems.map((item: IMetaDataDetails, index) => {
-          <div className={`metadata-items ${(index % 2 != 0) ? '' : 'right-align'} `}>
-            <div className="item-header">{item.metaDatalabel}</div>
-            <div className="item-data">{item.metaDataText}</div>
-          </div>
+      <div className="metadata-details">
+        {this.props.metaDataItems.map((item: any, index) => {
+          console.log(item);
+          return (
+            <div className={`metadata-items ${(index % 2 != 0) ? 'right-align': ''} `}>
+              <div className="item-header">{item.metaDatalabel}</div>
+              <div className="item-data">{item.metaDataText}</div>
+            </div>
+          )
         })}
+      </div>
       </React.Fragment>
     );
   }

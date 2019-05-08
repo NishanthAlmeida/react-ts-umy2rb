@@ -95,36 +95,7 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                 </div>
                 <MetaDataDetails metaDataItems={TaskItems.HomePageData[0].metaDataDetails} />
 
-                <div className="metadata-details">
-                    <div className="metadata-items">
-                        <div className="item-header">Region:</div>
-                        <div className="item-data">EMEA</div>
-                    </div>
-                    <div className="metadata-items right-align">
-                        <div className="item-header">Amount:</div>
-                        <div className="item-data">1400</div>
-                    </div>
-                    <div className="metadata-items">
-                        <div className="item-header">Department:</div>
-                        <div className="item-data">Procurement</div>
-                    </div>
-                    <div className="metadata-items right-align">
-                        <div className="item-header">Vendor:</div>
-                        <div className="item-data">AgilePoint INC</div>
-                    </div>
-                    <div className="metadata-items">
-                        <div className="item-header">Product:</div>
-                        <div className="item-data">Agile Point NX 7.0</div>
-                    </div>
-                    <div className="metadata-items right-align">
-                        <div className="item-header">Requested By:</div>
-                        <div className="item-data">Jane Doe</div>
-                    </div>
-                    <div className="metadata-items">
-                        <div className="item-header">Requested Date:</div>
-                        <div className="item-data">12/03/2019</div>
-                    </div>
-                </div>
+               
                 <div className={`slideButton ${this.state.containerExpanded ? 'slideout' : 'slidein'}`} onClick={this.slideTaskDetails}>
                 </div>
             </div>
