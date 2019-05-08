@@ -50,7 +50,15 @@ export class TaskCards extends React.Component<AppProps, AppState> {
     prepareFarItems(){
       return [{
           key:'change-flow1',
-          name: 'Change Flow',
+          name: 'Lorem Ipsum',
+          icon: 'changeflow-icon',
+          onclick: (e) => {
+            alert('change flow');
+          }
+        },
+        {
+          key:'lorem-ipsum',
+          name: 'Lorem Ipsum',
           icon: 'changeflow-icon',
           onclick: (e) => {
             alert('change flow');

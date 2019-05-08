@@ -143,9 +143,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
 .faritem-menu {
   position: absolute;
   border: 1px solid #000;
-  width: 30vw;
-  max-height: 50vw;
-  height: 180px;
+  height: auto;
   border-radius: 2px;
   list-style: none;
   color: #323130;
@@ -168,7 +166,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
 .faritem-text {
   display: inline-block;
   vertical-align: middle;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 25px;
 }
 
