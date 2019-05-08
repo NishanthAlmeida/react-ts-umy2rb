@@ -19,7 +19,6 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
   }
 
   expandMenu = (e) => {
-    debugger;
     this.setState({expandFarItemMenu : (this.state.expandFarItemMenu) ? false : true, top: e.pageY, left: e.pageX});
   }
 
