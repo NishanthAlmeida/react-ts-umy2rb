@@ -9,16 +9,13 @@ export default {
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [
-        { name: "region", value: "EMEA"}
-        {
-        "region": "EMEA",
-        "amount": "1400",
-        "department": "Procurement",
-        "vendor": "AgilePoint INC",
-        "product": "Agile Point NX 7.0",
-        "requestedBy": "Jane Doe",
-        "requestedDate": "12/03/2019"
-      }]
+        { "metaDatalabel": "region", "metaDataText": "EMEA"},
+        { "metaDatalabel": "amount", "metaDataText": "1400"},
+        { "metaDatalabel": "department", "metaDataText": "Procurement"},
+        { "metaDatalabel": "vendor", "metaDataText": "AgilePoint INC"},
+        { "metaDatalabel": "product", "metaDataTextlue": "Agile Point NX 7.0"},
+        { "metaDatalabel": "requestedBy", "metaDataText": "Jane Doe"},
+        { "metaDatalabel": "requestedDate", "metaDataText": "12/03/2019"}]
     }
   ]
 }

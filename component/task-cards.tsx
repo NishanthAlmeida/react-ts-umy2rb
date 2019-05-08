@@ -93,7 +93,6 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                         <span>{TaskItems.HomePageData[0].timedetails.dueDays}</span>
                     </div>
                 </div>
-                {JSON.stringify(TaskItems.HomePageData[0].metaDataDetails)}
                 <MetaDataDetails metaDataItems={TaskItems.HomePageData[0].metaDataDetails} />
 
                 <div className="metadata-details">
