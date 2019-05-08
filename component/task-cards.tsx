@@ -121,7 +121,8 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                         <div className="item-data">12/03/2019</div>
                     </div>
                 </div>
-                  <div className={`slideButton ${this.state.containerExpanded ? 'slideout' : 'slidein'}`} onClick={this.slideTaskDetails}></div>
+                <div className={`slideButton ${this.state.containerExpanded ? 'slideout' : 'slidein'}`} onClick={this.slideTaskDetails}>
+                </div>
             </div>
         );
     }

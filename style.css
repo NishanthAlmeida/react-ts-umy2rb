@@ -135,7 +135,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
   left:0;
   width: 100vw;
   height: 100vh;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .faritems-container{
