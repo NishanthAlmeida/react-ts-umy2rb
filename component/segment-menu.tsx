@@ -22,6 +22,11 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
     this.setState({expandFarItemMenu : (this.state.expandFarItemMenu) ? false : true, top: e.pageY, left: e.pageX});
   }
 
+  closeFarItemMenu = (e) =>{
+    debugger;
+    this.setState({ expandFarItemMenu: false});
+  }
+
   render() {
     console.log(this.props);
     return (
@@ -36,7 +41,8 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
       <span className="menus" onClick={this.expandMenu}>
         <div className="menu-item dot-icon"></div>
       </span>
-      <div className="faritems-layer-container">
+      {this.state.expandFarItemMenu?
+      <div className="faritems-layer-container" onClick={this.closeFarItemMenu}>
       <div className="faritems-container">
       <ul className="faritem-menu" style={this.state.expandFarItemMenu ? {top: this.state.top, left: this.state.left, display:'block' } : { display: 'none' }}>
         {this.props.farItems.map((r) => {
@@ -50,6 +56,8 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
       </ul>
       </div>
       </div>
+       :
+      <React.Fragment></React.Fragment>}
       </div>
     );
   }

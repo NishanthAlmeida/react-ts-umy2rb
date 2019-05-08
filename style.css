@@ -134,10 +134,13 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
   top:0;
   left:0;
   width: 100vw;
+  height: 100vh;
+  visibility: hidden;
 }
 
 .faritems-container{
   position:relative;
+  visibility: visible;
 }
 
 .faritem-menu {
