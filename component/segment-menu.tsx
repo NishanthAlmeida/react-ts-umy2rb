@@ -7,20 +7,21 @@ export interface segmentMenuProps{
 }
 
 interface segmentMenuState{
-  expandMenu: boolean;
+  expandFarItemMenu: boolean;
+  top: string;
+  left: string;
 }
 
 export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuState> {
   constructor(props: segmentMenuProps) {
     super(props);
-    this.state = { expandMenu : true};
+    this.state = { expandFarItemMenu : false, top : '0px', left: '0px'};
   }
 
   expandMenu = (e) => {
     debugger;
-    this.setState({expandMenu : (this.state.expandMenu) ? false : true});
+    this.setState({expandFarItemMenu : (this.state.expandFarItemMenu) ? false : true, top: e.pageY, left: e.pageX});
   }
-
 
   render() {
     console.log(this.props);
@@ -36,13 +37,20 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
       <span className="menus" onClick={this.expandMenu}>
         <div className="menu-item dot-icon"></div>
       </span>
-      {this.props.farItems.map((r) => {
-        return (
-          <span className="menus" title={r.name} onClick={r.onClick}>
-            <div className={`menu-item ${r.icon}`}></div>
-          </span>
-        )
-      })}
+      <div className="faritems-layer-container">
+      <div className="faritems-container">
+      <ul className="faritem-menu" style={this.state.expandFarItemMenu ? {top: this.state.top, left: this.state.left, display:'block' } : { display: 'none' }}>
+        {this.props.farItems.map((r) => {
+          return (          
+              <li className="faritem-menu-item">
+                <span className="faritem-icon"></span>
+                <span className="faritem-text">r.name</span>
+              </li>
+          )
+        })}      
+      </ul>
+      </div>
+      </div>
       </div>
     );
   }
