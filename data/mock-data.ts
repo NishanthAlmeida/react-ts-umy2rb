@@ -19,12 +19,12 @@ export default {
       ]
     },
     {
-      "applicationName": "Finance Manage Approval1",
-      "processName": "Finance Process",
-      "priority": "High",
+      "applicationName": "HR Approval",
+      "processName": "HR Approval Process",
+      "priority": "Low",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
-        "dueDays": "Since 5 Days"
+        "processtarted": "12 Days Ago",
+        "dueDays": "Since 8 Days"
       },
       "metaDataDetails": [
         { "metaDatalabel": "Region", "metaDataText": "EMEA" },
@@ -37,12 +37,12 @@ export default {
       ]
     },
     {
-      "applicationName": "Finance Manage Approval1",
-      "processName": "Finance Process",
-      "priority": "High",
+      "applicationName": "Leave Request Application",
+      "processName": "Leave Request Process",
+      "priority": "Medium",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
-        "dueDays": "Since 5 Days"
+        "processtarted": "6 Days Ago",
+        "dueDays": "Since 2 Days"
       },
       "metaDataDetails": [
         { "metaDatalabel": "Region", "metaDataText": "EMEA" },
@@ -55,12 +55,12 @@ export default {
       ]
     },
     {
-      "applicationName": "Finance Manage Approval1",
-      "processName": "Finance Process",
+      "applicationName": "Budget Approval Application",
+      "processName": "Budget Approval Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
-        "dueDays": "Since 5 Days"
+        "processtarted": "15 Days Ago",
+        "dueDays": "Since 4 Days"
       },
       "metaDataDetails": [
         { "metaDatalabel": "Region", "metaDataText": "EMEA" },
