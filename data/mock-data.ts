@@ -8,7 +8,9 @@ export default {
         "processtarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
-      "metaDataDetails": {
+      "metaDataDetails": [
+        { name: "region", value: "EMEA"}
+        {
         "region": "EMEA",
         "amount": "1400",
         "department": "Procurement",
@@ -16,7 +18,7 @@ export default {
         "product": "Agile Point NX 7.0",
         "requestedBy": "Jane Doe",
         "requestedDate": "12/03/2019"
-      }
+      }]
     }
   ]
 }

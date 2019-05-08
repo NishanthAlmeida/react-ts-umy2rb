@@ -2,6 +2,7 @@ import * as React from 'react';
 import { SegmentMenu } from './segment-menu';
 import {default as TaskItems } from '../data/mock-data';
 import { ISegmentMenuItems } from '../types/segment-types';
+import { MetaDataDetails } from './metadata-component';
 
 interface AppProps{
   menuItems: any;
@@ -92,6 +93,9 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                         <span>{TaskItems.HomePageData[0].timedetails.dueDays}</span>
                     </div>
                 </div>
+                {JSON.stringify(TaskItems.HomePageData[0].metaDataDetails)}
+                <MetaDataDetails metaDataItems={TaskItems.HomePageData[0].metaDataDetails} />
+
                 <div className="metadata-details">
                     <div className="metadata-items">
                         <div className="item-header">Region:</div>
