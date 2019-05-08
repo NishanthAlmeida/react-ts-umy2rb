@@ -152,6 +152,7 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
   color: #323130;
   font-size: 16px;
   font-weight: 400;
+  background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.133) 0px 3.2px 7.2px 0px, rgba(0, 0, 0, 0.11) 0px 0.6px 1.8px 0px;
   margin: 0;
   padding: 0;
@@ -168,8 +169,9 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
 .faritem-text {
   display: inline-block;
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 25px;
+  margin: 3px;
 }
 
 .faritem-icon {
@@ -177,7 +179,8 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
   margin: 0px 2px;
   width: 30px;
   height: 30px;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAfCAYAAACPvW/2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIoSURBVFhH7ZbNi2lhHMfvn2Yj0oSSl2EShaxkI1laa6zs0czKwkssSFlQZKXkrSyUmg3T5P093+n33GMWDtd1D2Nu+da3U+f5/Tqfc57nfJ/nF36Y7kCndAc6pf8LaDaboVKp4OXlBYFAgDkcDqNarWKxWHBVwHq9RqfTQSQS+ao75FAoxHrn8znXydcfgQaDAWKxGCwWCx4eHpjNZjNSqRTG4zFXBWy3W7y/vyMajcJqtX7V7pt6k8kkRqMR18nXSSB6a4PBAJlMhqenJ7hcLuRyOUwmE67qtzabDd7e3tjXfHx8hEgk4lmj0TDo4XDIdfH1V0AmkwkOhwPZbJZNDd0ngH2dgroYEH1qj8eDZrPJjRzXx8cHXl9fodVqbw9ED0okErDZbBCLxbcFOgQjlUphNBqhUCi+F4jq9mHkcjl8Ph/y+TyCwSBbU98CRDXxeJwH8/z8jFarxTJnt9CdTud1gU7BrFYrVrf7+zKZDEql0nWAKAy73S6bFgq9YzA7ERQFIgXqocjYSRAQbS3lchlutxtqtfoozDkSNGU7qHq9zkKz3W4LgiEJXtQERZsrgdFVqAQDXVpXB1oul6jVavD7/fB6vSgUCphOp9woX1cHohwqFouw2+2XC0aKfzoTUeKm0+mzTOcfOpxdNKn1ej0kEglUKhV0Ot1Zpl1fqVSy4LwoEAWfUAsGot+41+uh0Wiws7VQU171+/1/T+pb6A50Sj8MCPgEdz/KFXU0n6sAAAAASUVORK5CYII=');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -199,4 +202,28 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
   margin-left: 10px;
   width: 18px !important;
   background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/more.png');
+}
+
+.release-to-queue-icon {
+  background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/releasetoqueue.png');
+}
+
+.rework-icon {
+  background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/rework.png');
+}
+
+.create-worked-item-icon {
+  background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/creatlinkworkitem.png');
+}
+
+.change-priority-icon {
+  background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/changepriority.png');
+}
+
+.cancel-process-icon {
+  background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/cancelprocess.png');
+}
+
+.view-description-icon {
+  background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/MaskGroup1.png');
 }

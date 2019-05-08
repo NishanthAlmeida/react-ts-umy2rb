@@ -4,7 +4,7 @@ export default {
       "applicationName": "Finance Manage Approval",
       "processName": "Finance Process",
       "priority": "High",
-      "timedetails": {
+      "timeDetails": {
         "processtarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
