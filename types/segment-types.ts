@@ -5,3 +5,20 @@ export interface ISegmentMenuItems{
   onClick: () => void;
 }
 
+export interface ITaskDetails{
+  applicationName: string;
+  processName: string;
+  priority: string;
+  timeDetails: ITimeDetails;
+  metaDataDetails: IMetaDataDetail[];
+}
+
+export interface ITimeDetails{
+  procesStarted: string;
+  dueDays: string;
+}
+
+export interface IMetaDataDetail{
+  metaDatalabel: string;
+  metaDataText: string;
+}

@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 import {TaskCards} from './component/task-cards';
+import {default as TaskItems } from './data/mock-data';
 
 interface AppProps { }
 interface AppState {
@@ -16,8 +17,13 @@ class App extends Component<AppProps, AppState> {
 
   render() {
     return (
-      <div>
-        <TaskCards />
+      <div className="taskdetails-container" >
+      {TaskItems.HomePageData.map((r) => { 
+        console.log(r);
+        return ( <TaskCards taskDetails={r} />  );
+         
+     })}
+        
       </div>
     );
   }
