@@ -68,10 +68,10 @@ export class TaskCards extends React.Component<AppProps, AppState> {
     }
 
     render() {
-      console.log(TaskItems.HomePageData);
         return (
             <div className="task-card" style={{ height: this.state.containerExpanded ? '200px' : '400px'}}>
                 <SegmentMenu menuItems={this.prepareSegmentMenuItems()} farItems={this.prepareFarItems()} />
+
                 <div className="processname">
                     {TaskItems.HomePageData[0].applicationName}
                 </div>
@@ -93,6 +93,7 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                         <span>{TaskItems.HomePageData[0].timedetails.dueDays}</span>
                     </div>
                 </div>
+
                 <MetaDataDetails metaDataItems={TaskItems.HomePageData[0].metaDataDetails} />
 
                

@@ -1,8 +1,8 @@
 export default {
   HomePageData: [
     {
-      "applicationName": "Finance Process",
-      "processName": "Finance Manage Approval",
+      "applicationName": "Finance Manage Approval",
+      "processName": "Finance Process",
       "priority": "High",
       "timedetails": {
         "processtarted": "3 Days Ago",
