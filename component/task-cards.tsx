@@ -20,8 +20,25 @@ export const renderheaders = (applicationName: string, processName: string) => {
   )
 }
 
-export const renderProcessData = () => {
+export const renderProcessData = (priority: string, processStartedDays: string, dueDays: string) => {
+  return (
+    <React.Fragment>
+      <div className="priority">
+        <span>Priority: </span> {priority}
+      </div>
 
+      <div className="time-details">
+        <div className="item-details">
+          <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processstarted.png" /></span>
+          <span>{processStartedDays}</span>
+        </div>
+        <div className="item-details right-align">
+          <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processtime.png" /></span>
+          <span>{dueDays}</span>
+        </div>
+      </div>
+    </React.Fragment>
+  );
 }
 
 export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
@@ -117,27 +134,14 @@ export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
   render() {
     return (
       <div className="task-card" style={{ height: this.state.containerExpanded ? TaskCardDefault.TaskCardDefaultValues.cardHeight : TaskCardDefault.TaskCardDefaultValues.cardExpandedHeight }}>
+
         <SegmentMenu menuItems={this.prepareSegmentMenuItems()} farItems={this.prepareFarItems()} />
+        
+        {renderheaders(this.props.taskDetails.applicationName, this.props.taskDetails.processName)}
 
-      {renderheaders(this.props.taskDetails.applicationName, this.props.taskDetails.processName)}
-
-        <div className="priority">
-          <span>Priority: </span> {this.props.taskDetails.priority}
-        </div>
-
-        <div className="time-details">
-          <div className="item-details">
-            <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processstarted.png" /></span>
-            <span>{this.props.taskDetails.timeDetails.procesStarted}</span>
-          </div>
-          <div className="item-details right-align">
-            <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processtime.png" /></span>
-            <span>{this.props.taskDetails.timeDetails.dueDays}</span>
-          </div>
-        </div>
+        {renderProcessData(this.props.taskDetails.priority, this.props.taskDetails.timeDetails.procesStarted, this.props.taskDetails.timeDetails.dueDays)}
 
         <MetaDataDetails metaDataItems={this.props.taskDetails.metaDataDetails} />
-
 
         <div className={`slideButton ${this.state.containerExpanded ? 'slideout' : 'slidein'}`} onClick={this.slideTaskDetails}>
         </div>
