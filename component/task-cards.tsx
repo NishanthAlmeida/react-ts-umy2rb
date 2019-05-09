@@ -20,7 +20,7 @@ export class TaskCards extends React.Component<AppProps, AppState> {
       this.setState({containerExpanded: (this.state.containerExpanded) ? false : true});
     }
 
-    prepareSegmentMenuItems(){
+    prepareSegmentMenuItems(): ISegmentMenuItems[]{
       return [
         {
           key: 'process-viewer',
@@ -49,7 +49,7 @@ export class TaskCards extends React.Component<AppProps, AppState> {
       ];
     }
 
-    prepareFarItems(){
+    prepareFarItems():ISegmentMenuItems[]{
       return [{
           key:'release-to-queue',
           name: 'Release to Queue',
