@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 .taskdetails-container{
-  width:100%;
+  width: 96%;
+  margin: 0 auto;
   height:auto;
   overflow: auto;
   border:1px solid #000;
@@ -185,6 +186,9 @@ background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2
   box-shadow: rgba(0, 0, 0, 0.133) 0px 3.2px 7.2px 0px, rgba(0, 0, 0, 0.11) 0px 0.6px 1.8px 0px;
   margin: 0;
   padding: 0;
+  transition-property: display;
+  transition-duration: .1s;
+  transition-timing-function: ease-in;
 }
 
 .faritem-menu-item {
