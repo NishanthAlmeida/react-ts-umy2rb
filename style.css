@@ -99,9 +99,18 @@ vertical-align: super;
   font-size: 12px;
 }
 
+.menu-widget{
+  margin:3px;
+}
+
 .menu-widget .menus{
   margin:3px;
   cursor: pointer;
+  display: inline-block;
+}
+
+.expand-content{
+  visibility: visible !important;
 }
 
 .menu-widget .menus img {
@@ -115,6 +124,14 @@ vertical-align: super;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+.menu-widget .segment-menu-inline{
+    visibility: visible;
+}
+
+.menu-widget .segment-menu-inline:hover{
+    visibility: visible;
 }
 
 .slideButton{
@@ -173,9 +190,14 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQ
 .faritem-menu-item {
   display: flex;
   box-sizing: border-box;
+  cursor: pointer;
   width: 100%;
   height: 40px;
   padding: 2px;
+}
+
+.faritem-menu-item:hover{
+      color: #1EA0E9;
 }
 
 .faritem-text {

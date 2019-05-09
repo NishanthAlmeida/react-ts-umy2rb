@@ -29,14 +29,17 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
   render() {
     return (
       <div className="menu-widget">
-        {this.props.menuItems.map((r) => {
+      <div className="segment-menu-inline" >
+      {this.props.menuItems.map((r) => {
           return (
             <span className="menus" title={r.name} onClick={r.onClick}>
               <div className={`menu-item ${r.icon}`}></div>
             </span>
           )
         })}
-        <span className="menus" onClick={this.expandMenu}>
+      </div>
+        
+        <span className="menus expand-content" onClick={this.expandMenu}>
           <div className="menu-item dot-icon"></div>
         </span>
         {this.state.expandFarItemMenu ?
