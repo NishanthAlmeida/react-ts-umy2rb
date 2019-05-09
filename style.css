@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 .taskdetails-container{
-  width: 96%;
+  width: 340px;
   margin: 0 auto;
   height:auto;
   overflow: auto;
@@ -128,10 +128,10 @@ vertical-align: super;
 }
 
 .menu-widget .segment-menu-inline{
-    visibility: visible;
+    visibility: hidden;
 }
 
-.menu-widget .segment-menu-inline:hover{
+.task-card:hover .menu-widget .segment-menu-inline{
     visibility: visible;
 }
 
