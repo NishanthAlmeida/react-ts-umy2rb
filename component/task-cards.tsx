@@ -3,12 +3,26 @@ import { SegmentMenu } from './segment-menu';
 import { default as TaskItems } from '../data/mock-data';
 import { ISegmentMenuItems, ITaskDetails } from '../types/segment-types';
 import { MetaDataDetails } from './metadata-component';
+import { default as TaskCardDefault } from '../defaults/taskcard-defaults';
 
 interface TaskCardProps {
   taskDetails: ITaskDetails;
 }
 
 interface TaskCardState { containerExpanded: boolean; }
+
+export const renderheaders = (applicationName: string, processName: string) => {
+  return (
+    <React.Fragment>
+      <div className="processname">{applicationName}</div>
+      <div className="appname">{processName}</div>
+    </React.Fragment>
+  )
+}
+
+export const renderProcessData = () => {
+
+}
 
 export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
   constructor(props: TaskCardProps) {
@@ -102,15 +116,10 @@ export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
 
   render() {
     return (
-      <div className="task-card" style={{ height: this.state.containerExpanded ? '200px' : '400px' }}>
+      <div className="task-card" style={{ height: this.state.containerExpanded ? TaskCardDefault.TaskCardDefaultValues.cardHeight : TaskCardDefault.TaskCardDefaultValues.cardExpandedHeight }}>
         <SegmentMenu menuItems={this.prepareSegmentMenuItems()} farItems={this.prepareFarItems()} />
 
-        <div className="processname">
-          {this.props.taskDetails.applicationName}
-        </div>
-        <div className="appname">
-          {this.props.taskDetails.processName}
-        </div>
+      {renderheaders(this.props.taskDetails.applicationName, this.props.taskDetails.processName)}
 
         <div className="priority">
           <span>Priority: </span> {this.props.taskDetails.priority}
