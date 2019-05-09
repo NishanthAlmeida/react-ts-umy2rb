@@ -5,7 +5,7 @@ export default {
       "processName": "Finance Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
+        "procesStarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [
