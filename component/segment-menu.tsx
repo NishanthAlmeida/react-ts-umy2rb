@@ -29,21 +29,21 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
   render() {
     return (
       <div className="menu-widget">
-      <div className="segment-menu-inline" >
-      {this.props.menuItems.map((item) => {
-          return (
-            <span className="menus" title={item.name} onClick={item.onClick}>
-              <div className={`menu-item ${item.icon}`}></div>
-            </span>
-          )
-        })}
-      </div>
-        
+        <div className="segment-menu-inline" >
+          {this.props.menuItems.map((item) => {
+            return (
+              <span className="menus" title={item.name} onClick={item.onClick}>
+                <div className={`menu-item ${item.icon}`}></div>
+              </span>
+            )
+          })}
+        </div>
+
         <span className="menus expand-content" onClick={this.expandMenu}>
           <div className="menu-item dot-icon"></div>
         </span>
         {this.state.expandFarItemMenu ?
-          <div className="faritems-layer-container" onClick={this.closeFarItemMenu}>
+          <div className="faritems-layer-container" onClick={this.closeFarItemMenu} >
             <div className="faritems-container" >
               <ul className="faritem-menu" style={this.state.expandFarItemMenu ? { top: this.state.top, left: this.state.left, display: 'block' } : { display: 'none' }}>
                 {this.props.farItems.map((item) => {
