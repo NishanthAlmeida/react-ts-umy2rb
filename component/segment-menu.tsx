@@ -48,7 +48,7 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
               <ul className="faritem-menu" style={this.state.expandFarItemMenu ? { top: this.state.top, left: this.state.left, display: 'block' } : { display: 'none' }}>
                 {this.props.farItems.map((r) => {
                   return (
-                    <li className="faritem-menu-item" key={r.name}>
+                    <li className="faritem-menu-item" key={r.name} onClick={r.onClick}>
                       <span className={`faritem-icon ${r.icon}`}></span>
                       <span className="faritem-text">{r.name}</span>
                     </li>

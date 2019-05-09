@@ -26,24 +26,24 @@ export class TaskCards extends React.Component<AppProps, AppState> {
           key: 'process-viewer',
           name: 'process-viewer',
           icon: 'process-icon',
-          onClick: (e) => {
-            alert('click');
+          onClick: (e: any) => {
+            alert('Prcoess Viewer Click');
           }
         },
         {
           key: 'open-form',
           name: 'open-form',
           icon: 'openform-icon',
-          onClick: (e) => {
-            alert('click');
+          onClick: (e: any) => {
+            alert('Open Form Click');
           }
         },
         {
           key:'change-flow',
           name: 'Change Flow',
           icon: 'changeflow-icon',
-          onclick: (e) => {
-            alert('change flow');
+          onClick: (e: any) => {
+            alert('Change flow Click');
           }
         }
       ];
@@ -54,48 +54,48 @@ export class TaskCards extends React.Component<AppProps, AppState> {
           key:'release-to-queue',
           name: 'Release to Queue',
           icon: 'release-to-queue-icon',
-          onclick: (e) => {
-            alert('change flow');
+          onClick: (e: any) => {
+            alert('Release to queue click');
           }
         },
         {
           key:'rework',
           name: 'Rework',
           icon: 'rework-icon',
-          onclick: (e) => {
-            alert('change flow');
+          onClick: (e: any) => {
+            alert('Re work');
           }
         },
         {
           key:'create-worked-item',
           name: 'Create Linked Worked Item',
           icon: 'create-worked-item-icon',
-          onclick: (e) => {
-            alert('change flow');
+          onClick: (e: any) => {
+            alert('Create worked item click');
           }
         },
         {
           key:'change-priority',
           name: 'Change Priority',
           icon: 'change-priority-icon',
-          onclick: (e) => {
-            alert('change flow');
+          onClick: (e: any) => {
+            alert('Change priority click');
           }
         },
         {
           key:'cancel-process',
           name: 'Cancel Process',
           icon: 'cancel-process-icon',
-          onclick: (e) => {
-            alert('change flow');
+          onClick: (e: any) => {
+            alert('Cancel process click');
           }
         },
         {
           key:'view-description',
           name: 'View Description',
           icon: 'view-description-icon',
-          onclick: (e) => {
-            alert('change flow');
+          onClick: (e: any) => {
+            alert('View description click');
           }
         }];
     }
@@ -119,7 +119,7 @@ export class TaskCards extends React.Component<AppProps, AppState> {
                 <div className="time-details">
                     <div className="item-details">
                         <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processstarted.png" /></span>
-                        <span>{this.props.taskDetails.timeDetails.processtarted}</span>
+                        <span>{this.props.taskDetails.timeDetails.procesStarted}</span>
                     </div>
                     <div className="item-details right-align">
                         <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processtime.png" /></span>
