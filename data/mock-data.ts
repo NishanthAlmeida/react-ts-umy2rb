@@ -23,7 +23,7 @@ export default {
       "processName": "HR Approval Process",
       "priority": "Low",
       "timeDetails": {
-        "processtarted": "12 Days Ago",
+        "procesStarted": "12 Days Ago",
         "dueDays": "Since 8 Days"
       },
       "metaDataDetails": [
@@ -41,7 +41,7 @@ export default {
       "processName": "Leave Request Process",
       "priority": "Medium",
       "timeDetails": {
-        "processtarted": "6 Days Ago",
+        "procesStarted": "6 Days Ago",
         "dueDays": "Since 2 Days"
       },
       "metaDataDetails": [
@@ -59,7 +59,7 @@ export default {
       "processName": "Budget Approval Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "15 Days Ago",
+        "procesStarted": "15 Days Ago",
         "dueDays": "Since 4 Days"
       },
       "metaDataDetails": [
@@ -77,7 +77,7 @@ export default {
       "processName": "Finance Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
+        "procesStarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [
@@ -95,7 +95,7 @@ export default {
       "processName": "Finance Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
+        "procesStarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [
@@ -113,7 +113,7 @@ export default {
       "processName": "Finance Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
+        "procesStarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [
@@ -131,7 +131,7 @@ export default {
       "processName": "Finance Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
+        "procesStarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [
@@ -149,7 +149,7 @@ export default {
       "processName": "Finance Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
+        "procesStarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [
@@ -167,7 +167,7 @@ export default {
       "processName": "Finance Process",
       "priority": "High",
       "timeDetails": {
-        "processtarted": "3 Days Ago",
+        "procesStarted": "3 Days Ago",
         "dueDays": "Since 5 Days"
       },
       "metaDataDetails": [

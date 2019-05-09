@@ -30,10 +30,10 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
     return (
       <div className="menu-widget">
       <div className="segment-menu-inline" >
-      {this.props.menuItems.map((r) => {
+      {this.props.menuItems.map((item) => {
           return (
-            <span className="menus" title={r.name} onClick={r.onClick}>
-              <div className={`menu-item ${r.icon}`}></div>
+            <span className="menus" title={item.name} onClick={item.onClick}>
+              <div className={`menu-item ${item.icon}`}></div>
             </span>
           )
         })}
@@ -46,11 +46,11 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
           <div className="faritems-layer-container" onClick={this.closeFarItemMenu}>
             <div className="faritems-container" >
               <ul className="faritem-menu" style={this.state.expandFarItemMenu ? { top: this.state.top, left: this.state.left, display: 'block' } : { display: 'none' }}>
-                {this.props.farItems.map((r) => {
+                {this.props.farItems.map((item) => {
                   return (
-                    <li className="faritem-menu-item" key={r.name} onClick={r.onClick}>
-                      <span className={`faritem-icon ${r.icon}`}></span>
-                      <span className="faritem-text">{r.name}</span>
+                    <li className="faritem-menu-item" key={item.name} onClick={item.onClick}>
+                      <span className={`faritem-icon ${item.icon}`}></span>
+                      <span className="faritem-text">{item.name}</span>
                     </li>
                   )
                 })}
