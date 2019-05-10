@@ -165,7 +165,7 @@ background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2
   left:0;
   width: 100vw;
   height: 100vh;
-  visibility: visible;
+  visibility: hidden;
   z-index: 1;
 }
 
@@ -189,6 +189,12 @@ background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2
   transition-property: display;
   transition-duration: .1s;
   transition-timing-function: ease-in;
+}
+
+.faritem-menu::after {
+    bottom: 100%;
+    left: 45%;
+    border-color: transparent transparent white transparent;
 }
 
 .faritem-menu-item {

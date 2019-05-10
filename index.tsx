@@ -6,9 +6,7 @@ import {TaskCard} from './component/task-cards';
 import {default as TaskItems } from './data/mock-data';
 
 interface AppProps { }
-interface AppState {
-  name: string;
-}
+interface AppState { }
 
 class App extends Component<AppProps, AppState> {
   constructor(props) {
@@ -19,11 +17,8 @@ class App extends Component<AppProps, AppState> {
     return (
       <div className="taskdetails-container" onScroll={this.scrolled}>
       {TaskItems.HomePageData.map((r) => { 
-        console.log(r);
         return ( <TaskCard taskDetails={r} />  );
-         
-     })}
-        
+     })}        
       </div>
     );
   }
