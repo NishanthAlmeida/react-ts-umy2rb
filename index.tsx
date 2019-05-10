@@ -17,7 +17,7 @@ class App extends Component<AppProps, AppState> {
 
   render() {
     return (
-      <div className="taskdetails-container" >
+      <div className="taskdetails-container" onScroll={this.scrolled}>
       {TaskItems.HomePageData.map((r) => { 
         console.log(r);
         return ( <TaskCard taskDetails={r} />  );
@@ -26,6 +26,10 @@ class App extends Component<AppProps, AppState> {
         
       </div>
     );
+  }
+
+  private scrolled = () =>{
+    console.log('scrolled');
   }
 }
 
