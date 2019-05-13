@@ -23,7 +23,7 @@ export class TaskDetails extends React.Component<any, any>{
         </div>
         <div className="taskdetails-container">
           {getFilteredTasks('New').map((r) => {
-            return (<TaskCard taskDetails={r} />);
+            return (<TaskCard taskDetails={r}/>);
           })}
         </div>
       </div>
