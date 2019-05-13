@@ -14,8 +14,8 @@ interface TaskCardState { containerExpanded: boolean; }
 export const renderheaders = (applicationName: string, processName: string) => {
   return (
     <React.Fragment>
-      <div className="processname">{applicationName}</div>
-      <div className="appname">{processName}</div>
+      <div className="processname" tabIndex="0">{applicationName}</div>
+      <div className="appname" tabIndex="0">{processName}</div>
     </React.Fragment>
   )
 }
@@ -23,7 +23,7 @@ export const renderheaders = (applicationName: string, processName: string) => {
 export const renderProcessData = (priority: string, processStartedDays: string, dueDays: string) => {
   return (
     <React.Fragment>
-      <div className="priority">
+      <div className="priority" >
         <span>Priority: </span> {priority}
       </div>
 
