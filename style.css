@@ -65,6 +65,10 @@ body{
   padding:5px 0px;
 }
 
+.task-info{
+  cursor: pointer;
+}
+
 .processname {
   font-size: 16px;
   color: #1EA0E9;

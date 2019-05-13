@@ -14,30 +14,31 @@ interface TaskCardState { containerExpanded: boolean; }
 export const renderheaders = (applicationName: string, processName: string) => {
   return (
     <React.Fragment>
-      <div className="processname">{applicationName}</div>
-      <div className="appname">{processName}</div>
+
     </React.Fragment>
   )
 }
 
-export const renderProcessData = (priority: string, processStartedDays: string, dueDays: string) => {
+export const renderProcessData = (props: TaskCardProps) => {
   return (
-    <React.Fragment>
+    <div className="task-info">
+      <div className="processname">{props.taskDetails.applicationName}</div>
+      <div className="appname">{props.taskDetails.processName}</div>
       <div className="priority" >
-        <span>Priority: </span> {priority}
+        <span>Priority: </span> {props.taskDetails.priority}
       </div>
 
       <div className="time-details">
         <div className="item-details">
           <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processstarted.png" /></span>
-          <span>{processStartedDays}</span>
+          <span>{props.taskDetails.timeDetails.procesStarted}</span>
         </div>
         <div className="item-details right-align">
           <span><img src="https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2rb@master/images/processtime.png" /></span>
-          <span>{dueDays}</span>
+          <span>{props.taskDetails.timeDetails.dueDays}</span>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -136,10 +137,8 @@ export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
       <div className="task-card" style={{ height: this.state.containerExpanded ? TaskCardDefault.TaskCardDefaultValues.cardHeight : TaskCardDefault.TaskCardDefaultValues.cardExpandedHeight }}>
 
         <SegmentMenu menuItems={this.prepareSegmentMenuItems()} farItems={this.prepareFarItems()} />
-        
-        {renderheaders(this.props.taskDetails.applicationName, this.props.taskDetails.processName)}
 
-        {renderProcessData(this.props.taskDetails.priority, this.props.taskDetails.timeDetails.procesStarted, this.props.taskDetails.timeDetails.dueDays)}
+        {renderProcessData(this.props)}
 
         <MetaDataDetails metaDataItems={this.props.taskDetails.metaDataDetails} />
 
