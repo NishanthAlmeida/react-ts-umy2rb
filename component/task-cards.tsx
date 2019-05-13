@@ -143,8 +143,8 @@ export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
 
         <MetaDataDetails metaDataItems={this.props.taskDetails.metaDataDetails} />
 
-        <div className={`slideButton ${this.state.containerExpanded ? 'slideout' : 'slidein'}`} onClick={this.slideTaskDetails}>
-        </div>
+        <a href=""><div className={`slideButton ${this.state.containerExpanded ? 'slideout' : 'slidein'}`} onClick={this.slideTaskDetails}>
+        </div></a>
       </div>
     );
   }

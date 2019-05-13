@@ -206,6 +206,7 @@ background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2
 
 .faritem-menu a{
   height: inherit;
+  color: inherit;
     display: flex;
     text-decoration: none;
 }
