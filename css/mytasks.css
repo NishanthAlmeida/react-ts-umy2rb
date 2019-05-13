@@ -3,3 +3,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+.status-heading{
+  margin: 0px 10px;
+}
