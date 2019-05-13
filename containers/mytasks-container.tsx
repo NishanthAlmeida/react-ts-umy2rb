@@ -4,7 +4,7 @@ import { TaskDetails } from '../component/taskdetails-component';
 export class MyTasks extends React.Component<any, any> {
   render(){
     return(
-      <div className="mytask-container">
+      <div className="homepage-columns mytask-container">
         <BreadCrump />
         <TaskDetails />
       </div>

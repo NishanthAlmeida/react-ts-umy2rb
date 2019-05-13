@@ -1,5 +1,8 @@
 .breadcrumb-menu{
   width: auto;
-  height: 30px;
-  margin: 10px;
+    font-size: 12px;
+    height: 30px;
+    padding: 5px 10px;
+    vertical-align: middle;
+    display: table-cell;
 }
