@@ -4,8 +4,8 @@ export default {
   MyTaskDefaults:{
     StatusColorCodes: {
       Assigned: '#1EA0E9',
-      New: '#95D579',
-      Overdue: '#EEC5C5'
+      New: '#259B23',
+      Overdue: '#E41D25'
     }
   },
   TaskCardDefaultValues : {
