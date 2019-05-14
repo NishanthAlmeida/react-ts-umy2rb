@@ -11,14 +11,6 @@ interface TaskCardProps {
 
 interface TaskCardState { containerExpanded: boolean; }
 
-export const renderheaders = (applicationName: string, processName: string) => {
-  return (
-    <React.Fragment>
-
-    </React.Fragment>
-  )
-}
-
 export const renderProcessData = (props: TaskCardProps) => {
   
 }

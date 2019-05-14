@@ -8,13 +8,13 @@ body{
   /* width: 32%; */
     max-width: 32%;
   margin: 10px;    
-  height: 600px;
+  height: 675px;
   background-color: #EEE;
   padding: 10px 5px;
 }
 
 .taskdetails-content{
-    height: inherit;
+    height: 650px;
     overflow: auto;  
 }
 
