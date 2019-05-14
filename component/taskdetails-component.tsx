@@ -16,11 +16,21 @@ export const statusContainer = (status: string, total: number) => {
     </div>);
 }
 
-export class TaskDetails extends React.Component<any, any>{
+interface ITaskDetailsProps {
+  taskStatusToDisplay: string[];}
+interface ITaskDetailsState {
+}
+
+export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetailsState>{
+  constructor(props: ITaskDetailsProps){
+    super(props);
+    this.state = { taskStatusToDisplay: this.props.taskStatusToDisplay };
+  }
   render() {
     const overdueTasks = getFilteredTasks('Overdue'), overdueTaskTotal = overdueTasks.length;
     const assignedTasks = getFilteredTasks('Assigned'), assignedTaskTotal = assignedTasks.length;
     const newTasks = getFilteredTasks('New'), newTaskTotal = overdueTasks.length;
+    console.log(this.state);
     return (
       <div className="mytasks-container">
         <div className="taskdetails-container">
@@ -30,7 +40,6 @@ export class TaskDetails extends React.Component<any, any>{
               return (<TaskCard taskDetails={r} />);
             })}
           </div>
-
         </div>
         <div className="taskdetails-container">
           {statusContainer('Assigned', assignedTaskTotal)}
