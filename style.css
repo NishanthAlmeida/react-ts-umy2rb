@@ -27,7 +27,7 @@ body{
 .taskdetails-content::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #868686;
 }
 /* 
@@ -47,9 +47,14 @@ body{
 .displaytask-container{
   width: 64%;
   border: 1px solid #ccc;
-  transition: width 3s ease;
+  animation-name: slideout;
+  animation-duration: .8s;
 }
 
+@keyframes slideout {
+  from {width: 30%}
+  to {width: 64%}
+}
 
 
 .task-card {

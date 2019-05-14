@@ -109,7 +109,7 @@ export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
   }
 
   private onClickTask =() => {
-    this.props.opentask(this.props.taskDetails.applicationName);
+    this.props.opentask(this.props.taskDetails.TaskID);
   }
 
   renderTaskDetails = () => {

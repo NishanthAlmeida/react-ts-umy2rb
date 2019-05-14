@@ -22,17 +22,18 @@ interface ITaskDetailsProps {
 }
 interface ITaskDetailsState {
   taskStatuses: string[];
+  taskId: String;
 }
 
 export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetailsState>{
   constructor(props: ITaskDetailsProps) {
     super(props);
-    this.state = { taskStatuses: this.props.taskStatusToDisplay };
+    this.state = { taskStatuses: this.props.taskStatusToDisplay, taskId: "" };
   }
 
   private onClickTask = (WID: string) => {
     console.log(WID);
-    this.setState({ taskStatuses: ['All'] });
+    this.setState({ taskStatuses: ['All'], taskId: WID });
   }
 
   render() {
@@ -56,6 +57,9 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
           <div className="displaytask-container">
             <div className="icon-container">
               <div className="button-close" onClick={() => this.setState({taskStatuses: ['Overdue', 'Assigned', 'New']})}>✕</div>
+            </div>
+            <div>
+              {this.state.taskId}
             </div>
           </div>
           : null
