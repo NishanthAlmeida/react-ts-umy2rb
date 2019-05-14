@@ -39,7 +39,6 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
   render() {
     return (
       <div className="mytasks-container animated zoomIn delay-1s">
-
         {this.state.taskStatuses.map((item) => {
           const Tasks = getFilteredTasks(item), TaskTotal = Tasks.length;
           return (
