@@ -34,15 +34,8 @@ body{
 .displaytask-container{
   width: 68%;
   border: 1px solid #ccc;
-  animation-name: slideout;
-  animation-duration: .8s;
+  margin: 10px;
 }
-
-@keyframes slideout {
-  from {width: 30%}
-  to {width: 64%}
-}
-
 
 .task-card {
   float:left;
