@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BreadCrump } from '../component/breadcrump-component';
+import { BreadCrumb } from '../component/breadcrump-component';
 import { TaskDetails } from '../component/taskdetails-component'; 
 
 interface IMyTasksProps {
@@ -17,7 +17,7 @@ export class MyTasks extends React.Component<IMyTasksProps, IMyTasksState> {
   render(){
     return(
       <div className="homepage-columns mytask-container">
-        <BreadCrump />
+        <BreadCrumb />
         <TaskDetails taskStatusToDisplay={['Overdue', 'Assigned', 'New']} />
       </div>
     );

@@ -38,7 +38,7 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
 
   render() {
     return (
-      <div className="mytasks-container">
+      <div className="mytasks-container animated zoomIn delay-1s">
 
         {this.state.taskStatuses.map((item) => {
           const Tasks = getFilteredTasks(item), TaskTotal = Tasks.length;
@@ -54,7 +54,7 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
           );
         })}
         {this.state.taskStatuses.length === 1 ?
-          <div className="displaytask-container">
+          <div className="displaytask-container animated slideInLeft delay-1s">
             <div className="icon-container">
               <div className="button-close" onClick={() => this.setState({taskStatuses: ['Overdue', 'Assigned', 'New']})}>✕</div>
             </div>
