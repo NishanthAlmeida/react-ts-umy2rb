@@ -40,7 +40,7 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
         </div>
 
         <span className="menus expand-content" onClick={this.expandMenu}>
-          <div className="menu-item dot-icon" tabIndex="0"></div>
+          <div className="menu-item dot-icon"></div>
         </span>
         {this.state.expandFarItemMenu ?
           <div className="faritems-layer-container" onClick={this.closeFarItemMenu} >
@@ -48,8 +48,8 @@ export class SegmentMenu extends React.Component<segmentMenuProps, segmentMenuSt
               <ul className="faritem-menu" style={this.state.expandFarItemMenu ? { top: this.state.top, left: this.state.left, display: 'block' } : { display: 'none' }}>
                 {this.props.farItems.map((item) => {
                   return (
-                    <li className="faritem-menu-item" tabIndex="0" key={item.name} onClick={item.onClick}>
-                    <a href="" style={{width:'100%'}}>
+                    <li className="faritem-menu-item" key={item.name} onClick={item.onClick}>
+                    <a style={{width:'100%'}}>
                       <span className={`faritem-icon ${item.icon}`}></span>
                       <span className="faritem-text">{item.name}</span>
                       </a>
