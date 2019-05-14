@@ -18,6 +18,7 @@ export const statusContainer = (status: string, total: number) => {
 
 interface ITaskDetailsProps {
   taskStatusToDisplay: string[];
+  callBack: (workItemID: string) => any;
 }
 interface ITaskDetailsState {
   taskStatuses: string[];
