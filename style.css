@@ -313,8 +313,8 @@ background-image: url('https://cdn.jsdelivr.net/gh/NishanthAlmeida/react-ts-umy2
 /*Animation code for task cards*/
 
 .animated.delay-1s {
-  -webkit-animation-delay: .1s;
-  animation-delay: .1s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
 }
 
 .animated {

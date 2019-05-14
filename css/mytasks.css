@@ -9,17 +9,20 @@
   font-size: 14px;
 }
 
+.status-count{
+  font-weight: 600;
+}
+
 .icon-container {
-	display: flex;
-  max-width: 100px;
-  height: 32px;
-  float:right;
+  width:100%;
 }
 .button-close {
-	text-align: center;
     font-size: 12px;
     padding: 8px;
     background-color: #C32148;
     color: white;
     cursor: pointer;
+    width:30px;
+    height: 30px;
+    float: right;
 }

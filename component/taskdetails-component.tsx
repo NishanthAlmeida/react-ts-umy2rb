@@ -12,7 +12,7 @@ export const statusContainer = (status: string, total: number) => {
   return (
     <div className="status-heading">
       <span>{status} </span>
-      <span style={{ color: MyTaskDefaults.MyTaskDefaults.StatusColorCodes[status] }}>{total}</span>
+      <span className="status-count" style={{ color: MyTaskDefaults.MyTaskDefaults.StatusColorCodes[status] }}>{total}</span>
     </div>);
 }
 
