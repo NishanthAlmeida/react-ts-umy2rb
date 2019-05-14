@@ -12,7 +12,7 @@ export const statusContainer = (status: string, total: number) => {
   return (
     <div className="status-heading">
       <span>{status} </span>
-      <span style={{color: MyTaskDefaults.MyTaskDefaults.StatusColorCodes[status]}}>{total}</span>
+      <span style={{ color: MyTaskDefaults.MyTaskDefaults.StatusColorCodes[status] }}>{total}</span>
     </div>);
 }
 
@@ -25,21 +25,28 @@ export class TaskDetails extends React.Component<any, any>{
       <div className="mytasks-container">
         <div className="taskdetails-container">
           {statusContainer('Overdue', overdueTaskTotal)}
-          {overdueTasks.map((r) => {
-            return (<TaskCard taskDetails={r} />);
-          })}
+          <div className="taskdetails-content">
+            {overdueTasks.map((r) => {
+              return (<TaskCard taskDetails={r} />);
+            })}
+          </div>
+
         </div>
         <div className="taskdetails-container">
           {statusContainer('Assigned', assignedTaskTotal)}
-          {getFilteredTasks('Assigned').map((r) => {
-            return (<TaskCard taskDetails={r} />);
-          })}
+          <div className="taskdetails-content">
+            {getFilteredTasks('Assigned').map((r) => {
+              return (<TaskCard taskDetails={r} />);
+            })}
+          </div>
         </div>
         <div className="taskdetails-container">
           {statusContainer('New', newTaskTotal)}
-          {getFilteredTasks('New').map((r) => {
-            return (<TaskCard taskDetails={r} />);
-          })}
+          <div className="taskdetails-content">
+            {getFilteredTasks('New').map((r) => {
+              return (<TaskCard taskDetails={r} />);
+            })}
+          </div>
         </div>
       </div>
     );

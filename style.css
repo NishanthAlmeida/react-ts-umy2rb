@@ -8,9 +8,26 @@ body{
   width: 32%;
   margin: auto;    
   height: 650px;
-  overflow: auto;
   background-color: #EEE;
   padding: 10px 5px;
+}
+
+.taskdetails-content{
+    height: inherit;
+    overflow: auto;  
+}
+
+
+.taskdetails-content::-webkit-scrollbar{
+  width:10px;
+  background-color: #E2E2E2;
+}
+
+.taskdetails-content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #868686;
 }
 
 .mytasks-container .taskdetails-container:nth-child(2){
@@ -25,17 +42,7 @@ body{
   order: 2;
 }
 
-.taskdetails-container::-webkit-scrollbar{
-  width:10px;
-  background-color: #E2E2E2;
-}
 
-.taskdetails-container::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #868686;
-}
 
 .task-card {
   float:left;
