@@ -10,7 +10,9 @@ interface TaskCardProps {
   opentask: (e: any) => void;
 }
 
-interface TaskCardState { containerExpanded: boolean; }
+interface TaskCardState { 
+  containerExpanded: boolean;
+}
 
 export const renderProcessData = (props: TaskCardProps) => {
   

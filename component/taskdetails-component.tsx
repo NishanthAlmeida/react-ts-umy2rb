@@ -30,12 +30,12 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
     this.state = { taskStatuses: this.props.taskStatusToDisplay };
   }
 
-  private onClickTask(WID: string) {
+  private onClickTask = (WID: string) => {
     console.log(WID);
+    this.setState({ taskStatuses: ['All'] });
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="mytasks-container">
 
@@ -52,10 +52,13 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
             </div>
           );
         })}
+        {this.state.taskStatuses.length === 1 ?
+          <div className="displaytask-container">
 
-        <div className="displaytask-container">
+          </div>
+          : null
+        }
 
-        </div>
 
       </div>
     );
