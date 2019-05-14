@@ -54,7 +54,9 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
         })}
         {this.state.taskStatuses.length === 1 ?
           <div className="displaytask-container">
-
+            <div className="icon-container">
+              <div className="button-close btn3">✕</div>
+            </div>
           </div>
           : null
         }
