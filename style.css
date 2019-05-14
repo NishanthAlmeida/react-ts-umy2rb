@@ -47,6 +47,7 @@ body{
 .displaytask-container{
   width: 64%;
   border: 1px solid #ccc;
+  transition: width 3s ease;
 }
 
 

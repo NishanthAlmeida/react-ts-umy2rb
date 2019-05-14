@@ -18,7 +18,7 @@ export const statusContainer = (status: string, total: number) => {
 
 interface ITaskDetailsProps {
   taskStatusToDisplay: string[];
-  opentask: (e: any) => void;
+  opentask?: (e: any) => void;
 }
 interface ITaskDetailsState {
   taskStatuses: string[];
@@ -55,7 +55,7 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
         {this.state.taskStatuses.length === 1 ?
           <div className="displaytask-container">
             <div className="icon-container">
-              <div className="button-close btn3">✕</div>
+              <div className="button-close" onClick={() => this.setState({taskStatuses: ['Overdue', 'Assigned', 'New']})}>✕</div>
             </div>
           </div>
           : null

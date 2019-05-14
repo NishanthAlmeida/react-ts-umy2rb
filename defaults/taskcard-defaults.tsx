@@ -7,6 +7,12 @@ export default {
       New: '#259B23',
       Overdue: '#E41D25',
       All: '#9DC8E9'
+    },
+    status: {
+      Assigned: 'Assigned',
+      New: 'New',
+      Overdue: 'Overdue',
+      All: 'All'
     }
   },
   TaskCardDefaultValues : {
