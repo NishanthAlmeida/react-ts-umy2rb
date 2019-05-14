@@ -7,7 +7,7 @@ import { default as TaskCardDefault } from '../defaults/taskcard-defaults';
 
 interface TaskCardProps {
   taskDetails: ITaskDetails;
-  opentask?(wid: string): (e: any) => void;
+  opentask: (e: any) => void;
 }
 
 interface TaskCardState { containerExpanded: boolean; }
@@ -106,10 +106,13 @@ export class TaskCard extends React.Component<TaskCardProps, TaskCardState> {
     }];
   }
 
+  private onClickTask =() => {
+    this.props.opentask(this.props.taskDetails.applicationName);
+  }
 
   renderTaskDetails = () => {
     return (
-    <div className="task-info" onClick={this.props.opentask(this.props.taskDetails.applicationName)}>
+    <div className="task-info" onClick={this.onClickTask.bind(this)}>
       <div className="processname">{this.props.taskDetails.applicationName}</div>
       <div className="appname">{this.props.taskDetails.processName}</div>
       <div className="priority" >

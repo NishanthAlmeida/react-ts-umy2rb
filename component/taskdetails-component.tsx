@@ -18,19 +18,20 @@ export const statusContainer = (status: string, total: number) => {
 
 interface ITaskDetailsProps {
   taskStatusToDisplay: string[];
-  opentask?(wid: string): (e: any) => void;
+  opentask: (e: any) => void;
 }
 interface ITaskDetailsState {
   taskStatuses: string[];
 }
 
 export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetailsState>{
-  constructor(props: ITaskDetailsProps){
+  constructor(props: ITaskDetailsProps) {
     super(props);
     this.state = { taskStatuses: this.props.taskStatusToDisplay };
   }
 
-  private onClickTask(WID: string){
+  private onClickTask(WID: string) {
+    console.log(WID);
   }
 
   render() {
@@ -39,21 +40,21 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
       <div className="mytasks-container">
 
         {this.state.taskStatuses.map((item) => {
-        const Tasks = getFilteredTasks(item), TaskTotal = Tasks.length;
-        return (
-          <div className="taskdetails-container">
-          {statusContainer(item, TaskTotal)}
-          <div className="taskdetails-content">
-            {Tasks.map((r) => {
-              return (<TaskCard taskDetails={r} opentask={this.onClickTask('qweqw')} />);
-            })}
-          </div>
-        </div>
-        );
+          const Tasks = getFilteredTasks(item), TaskTotal = Tasks.length;
+          return (
+            <div className="taskdetails-container">
+              {statusContainer(item, TaskTotal)}
+              <div className="taskdetails-content">
+                {Tasks.map((r) => {
+                  return (<TaskCard taskDetails={r} opentask={this.onClickTask} />);
+                })}
+              </div>
+            </div>
+          );
         })}
 
         <div className="displaytask-container">
-          
+
         </div>
 
       </div>
