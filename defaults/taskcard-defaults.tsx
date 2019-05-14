@@ -5,7 +5,8 @@ export default {
     StatusColorCodes: {
       Assigned: '#1EA0E9',
       New: '#259B23',
-      Overdue: '#E41D25'
+      Overdue: '#E41D25',
+      All: '#9DC8E9'
     }
   },
   TaskCardDefaultValues : {

@@ -18,7 +18,7 @@ export class MyTasks extends React.Component<IMyTasksProps, IMyTasksState> {
     return(
       <div className="homepage-columns mytask-container">
         <BreadCrump />
-        <TaskDetails taskStatusToDisplay={['Overdue', 'Assigned', 'New']} />
+        <TaskDetails taskStatusToDisplay={['All']} />
       </div>
     );
   }

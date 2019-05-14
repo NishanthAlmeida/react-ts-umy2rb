@@ -5,8 +5,9 @@ body{
 }
 
 .taskdetails-container{
-  width: 32%;
-  margin: auto;    
+  /* width: 32%; */
+    max-width: 32%;
+  margin: 10px;    
   height: 600px;
   background-color: #EEE;
   padding: 10px 5px;
@@ -29,9 +30,9 @@ body{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #868686;
 }
-
+/* 
 .mytasks-container .taskdetails-container:nth-child(2){
-  order: 2;
+  order: 1;
 }
 
 .mytasks-container .taskdetails-container:nth-child(3){
@@ -40,6 +41,12 @@ body{
 
 .mytasks-container .taskdetails-container:nth-child(2){
   order: 2;
+} */
+
+/*Display Task Container*/
+.displaytask-container{
+  width: 64%;
+  border: 1px solid #ccc;
 }
 
 

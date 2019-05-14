@@ -11,6 +11,8 @@ export interface ITaskDetails{
   priority: string;
   timeDetails: ITimeDetails;
   metaDataDetails: IMetaDataDetail[];
+  TaskID: string;
+  ProcessID: string;
 }
 
 export interface ITimeDetails{
