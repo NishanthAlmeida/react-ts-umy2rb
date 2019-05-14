@@ -18,7 +18,7 @@ export const statusContainer = (status: string, total: number) => {
 
 interface ITaskDetailsProps {
   taskStatusToDisplay: string[];
-  callBack: (workItemID: string) => any;
+  opentask?(wid: string): (e: any) => void;
 }
 interface ITaskDetailsState {
   taskStatuses: string[];
@@ -29,6 +29,10 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
     super(props);
     this.state = { taskStatuses: this.props.taskStatusToDisplay };
   }
+
+  private onClickTask(WID: string){
+  }
+
   render() {
     console.log(this.state);
     return (
@@ -41,7 +45,7 @@ export class TaskDetails extends React.Component<ITaskDetailsProps, ITaskDetails
           {statusContainer(item, TaskTotal)}
           <div className="taskdetails-content">
             {Tasks.map((r) => {
-              return (<TaskCard taskDetails={r} />);
+              return (<TaskCard taskDetails={r} opentask={this.onClickTask('qweqw')} />);
             })}
           </div>
         </div>
